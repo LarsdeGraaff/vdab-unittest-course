@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by jeansmits on 5/06/15.
- */
 public class FractionTest {
 
     @Test
@@ -25,8 +22,25 @@ public class FractionTest {
     @Test
     public void testEquals() {
         Fraction f = new Fraction(10, 5);
-        Fraction f1= new Fraction (10,5);
-        assertEquals(f,f.equals(f1));
+        Fraction f1 = new Fraction(10, 5);
+        assertEquals(true, f.equals(f1));
+
+    }
+
+    @Test
+    public void testReciprocal(){
+            Fraction a= new Fraction(5,4);
+            Fraction b = a.reciprocal();
+
+            assertEquals(5,b.getDeler());
+            assertEquals(4,b.getTeller());
+        }
+
+    @Test
+    public void testsetteller() throws Exception {
+        Fraction k = new Fraction(10,5);
+        assertEquals(10,k.getTeller());
 
     }
 }
+

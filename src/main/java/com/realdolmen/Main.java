@@ -1,8 +1,5 @@
 package com.realdolmen;
 
-/**
- * Created by jeansmits on 5/06/15.
- */
 public class Main {
     public static void main(String[] args) {
         Fraction a = new Fraction(10,4);
@@ -21,6 +18,10 @@ public class Main {
 
         //equals
         System.out.println(b.equals(c));
+
+        //reciprocal
+        Fraction r = a.reciprocal();
+        System.out.println(r);
     }
 
 }

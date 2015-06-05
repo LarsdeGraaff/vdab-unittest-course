@@ -1,8 +1,5 @@
 package com.realdolmen;
 
-/**
- * Created by jeansmits on 4/06/15.
- */
 public class Fraction {
     private int teller;
     private int deler;
@@ -49,12 +46,22 @@ public class Fraction {
     public boolean equals(Fraction f) {
         f.simplify();
         this.simplify();
-        if( f.getTeller()==this.getTeller() || f.getDeler()==this.getDeler()){
-            return  true;
-        }
-        else{
+        if (f.getTeller() == this.getTeller() || f.getDeler() == this.getDeler()) {
+            return true;
+        } else {
             return false;
         }
+    }
+
+    public Fraction reciprocal(){
+        return new Fraction(this.deler,this.teller);
+    }
+
+
+
+
+
+
     }
 //
 //    @Override
@@ -75,4 +82,4 @@ public class Fraction {
 //        result = 31 * result + deler;
 //        return result;
 //    }
-}
+
