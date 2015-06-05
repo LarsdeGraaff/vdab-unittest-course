@@ -46,12 +46,33 @@ public class Fraction {
         return kommagetal;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof Fraction)) {
+    public boolean equals(Fraction f) {
+        f.simplify();
+        this.simplify();
+        if( f.getTeller()==this.getTeller() || f.getDeler()==this.getDeler()){
+            return  true;
+        }
+        else{
             return false;
         }
-        Fraction other = (Fraction) obj;
-        return this.teller * other.deler == other.teller * this.deler;
     }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        Fraction fraction = (Fraction) o;
+//
+//        if (teller != fraction.teller) return false;
+//        return deler == fraction.deler;
+//
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result = teller;
+//        result = 31 * result + deler;
+//        return result;
+//    }
 }

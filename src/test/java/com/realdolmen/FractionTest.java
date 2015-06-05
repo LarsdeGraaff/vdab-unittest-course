@@ -23,7 +23,10 @@ public class FractionTest {
     }
 
     @Test
-    public void testEquals(){
+    public void testEquals() {
+        Fraction f = new Fraction(10, 5);
+        Fraction f1= new Fraction (10,5);
+        assertEquals(f,f.equals(f1));
 
     }
 }
