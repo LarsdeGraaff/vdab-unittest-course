@@ -1,10 +1,14 @@
 package com.realdolmen;
 
 import org.junit.Test;
+import org.omg.CORBA.portable.ValueFactory;
 
 import static org.junit.Assert.assertEquals;
 
 public class UtilitiesTest {
+
+
+
     @Test
     public void greatestCommonFactorReturnsGreatestCommonFactorForNormalValues() {
         assertEquals(8, Utilities.greatestCommonFactor(24, 16));
@@ -34,4 +38,6 @@ public class UtilitiesTest {
     public void unittest() throws Exception{
         assertEquals(30, Utilities.greatestCommonFactor(-30,30));
     }
+
+
 }
