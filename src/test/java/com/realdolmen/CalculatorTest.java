@@ -38,5 +38,13 @@ public class CalculatorTest {
         Calculator c = new Calculator();
         String a="5\n5\n5\n5\n5\n5\n5\n5";
         assertEquals(40,c.add(a));
+
+    }
+
+    @Test
+    public void testChangeDelimiter() throws Exception{
+        Calculator c = new Calculator();
+        String a="//;\n1;2;3";
+        assertEquals(6,c.add(a));
     }
 }
