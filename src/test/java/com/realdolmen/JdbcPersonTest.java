@@ -72,11 +72,11 @@ public class JdbcPersonTest {
         assertEquals(1963, c.get(Calendar.YEAR));
     }
 
-    @Test
-    public void testFoundById() throws Exception {
-        PersonRepository repository= new JdbcPersonRepository();
-        Person person=repository.find(100);
-
-    }
+//    @Test
+//    public void testFoundById() throws Exception {
+//        PersonRepository repository= new JdbcPersonRepository();
+//        Person person=repository.find(100);
+//
+//    }
 }
 
