@@ -18,12 +18,16 @@ public class CalculatorTest {
 
     @Test
     public void testAddOneNumber() throws Exception {
-
-
+        Calculator c = new Calculator();
+        String a="5";
+        assertEquals(5,c.add(a));
     }
 
     @Test
-
     public void testAddTwoNumber() throws Exception{
+        Calculator c = new Calculator();
+        String a="5,5";
+        assertEquals(10,c.add(a));
     }
+
 }
