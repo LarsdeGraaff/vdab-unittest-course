@@ -37,9 +37,16 @@ public class JdbcPersonRepository implements PersonRepository {
                 statement.setInt(1, id);
                 ResultSet resultSet = statement.executeQuery();
                 resultSet.next();
+                if(resultSet.next()==false){
+                    return null;
+                }
+                else{
+                    return new PersonMapper().implode(resultSet);
+                }
+
                 // What happens if there is no person with this id?
                 // Did you test that scenario?
-                return new PersonMapper().implode(resultSet);
+
             }
         });
     }

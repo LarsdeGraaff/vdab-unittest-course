@@ -36,7 +36,7 @@ public class JdbcPersonTest {
 }
     @Test
 
-    public void testPersonCanBeFoundById() throws Exception{
+    public void testPersonCanBeFoundByFirsName() throws Exception{
         PersonRepository repository= new JdbcPersonRepository();
 
         Person person=repository.find(1);
@@ -70,6 +70,12 @@ public class JdbcPersonTest {
         c.setTime(person.getBirthDate());
 
         assertEquals(1963, c.get(Calendar.YEAR));
+    }
+
+    @Test
+    public void testFoundById() throws Exception {
+        PersonRepository repository= new JdbcPersonRepository();
+        Person person=repository.find(100);
 
     }
 }
