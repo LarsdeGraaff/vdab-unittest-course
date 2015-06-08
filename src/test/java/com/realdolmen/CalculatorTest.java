@@ -4,10 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-
-/**
- * Created by jeansmits on 8/06/15.
- */
 public class CalculatorTest {
     @Test
 
@@ -30,4 +26,17 @@ public class CalculatorTest {
         assertEquals(10,c.add(a));
     }
 
+    @Test
+    public void testAddRandomNumbers() throws Exception{
+        Calculator c = new Calculator();
+        String a="5,5,5,5,5,5,5,5";
+        assertEquals(40,c.add(a));
+    }
+
+    @Test
+    public void testAddRandomNumbersWithNewLinesInsteadOfComma() throws Exception{
+        Calculator c = new Calculator();
+        String a="5\n5\n5\n5\n5\n5\n5\n5";
+        assertEquals(40,c.add(a));
+    }
 }
