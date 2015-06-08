@@ -24,14 +24,12 @@ public class FractionTest {
         Fraction f = new Fraction(10, 5);
         Fraction f1 = new Fraction(10, 5);
         assertEquals(true, f.equals(f1));
-
     }
 
     @Test
     public void testReciprocal(){
             Fraction a= new Fraction(5,4);
             Fraction b = a.reciprocal();
-
             assertEquals(5,b.getDeler());
             assertEquals(4,b.getTeller());
         }
@@ -39,7 +37,11 @@ public class FractionTest {
     @Test
     public void testsetteller() throws Exception {
         Fraction k = new Fraction(10,5);
-        assertEquals(10,k.getTeller());
+        assertEquals(10, k.getTeller());
+    }
+
+    @Test
+    public void testMultiply(){
 
     }
 }

@@ -57,7 +57,9 @@ public class Fraction {
         return new Fraction(this.deler,this.teller);
     }
 
-
+    public Fraction multiply(Fraction f){
+        return new Fraction(this.teller*f.teller,this.deler*f.deler);
+    }
 
 
 
